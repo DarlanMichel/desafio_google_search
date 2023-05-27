@@ -1,5 +1,8 @@
-import 'package:client/src/home/home_page.dart';
+import 'package:client/src/home/presentation/bloc/google_bloc.dart';
+import 'package:client/src/home/presentation/pages/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get_it/get_it.dart';
 
 class AppWidget extends StatelessWidget {
   const AppWidget({super.key});
@@ -7,12 +10,15 @@ class AppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Google Search Client',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
-      home: const HomePage(),
+      home: BlocProvider(
+          create: (context) => GetIt.instance.get<GoogleBloc>(),
+          child: const HomePage()),
     );
   }
 }
