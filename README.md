@@ -36,3 +36,19 @@ MARINGA.COM - O portal da cidade de Maringá - Paraná
 
 Prefeitura do Município de Maringá
 [www.maringa.pr.gov.br/]
+
+
+## Como executar o projeto
+- Primeiramente deve-se instalar o Dart seguindo a documentação do mesmo: https://dart.dev/get-dart
+- Após instalação do Dart, instalar o flutter seguindo documentação: https://flutter.dev/docs/get-started/install
+- Com as ferramentas devidamente instaladas é necessário fazer o Download desse repositório.
+- Após o download abra o projeto backend no VSCode.
+- Execute o comando "flutter pub get" para baixar as bibliotecas do pubspec.yaml.
+- Abra o arquivo .env e no campo IP_CONFIG insira o ip da sua máquina.
+- Após execute o comando "dart run" ou aperte f5.
+- Pronto o servidor API está rodando.
+- Agora abra em uma nova janela o projeto client no VSCode.
+- Execute o comando "flutter pub get" para baixar as bibliotecas do pubspec.yaml.
+- Abra o arquivo .env e no campo IP_CONFIG insira o ip da sua máquina.
+- Abra um emulador Android ou iOS.
+- Após execute o comando "flutter run" ou aperte f5.
